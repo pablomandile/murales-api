@@ -61,9 +61,20 @@ class VisitasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(VisitaRequest $request, string $id): JsonResponse
     {
-        //
+        $visita = Visita::find($id);
+
+        if (!$visita) {
+            return response()->json(['success' => false, 'message' => 'Visita no encontrada'], 404);
+        }
+
+        $visita->update($request->all());
+
+        return response()->json([
+            'success' => 'true',
+            'data' => new VisitaResource($visita)
+        ], 200);
     }
 
     /**
@@ -71,6 +82,10 @@ class VisitasController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Visita::find($id)->delete();
+
+        return response()->json([
+            'success' => 'true'
+        ], 200);
     }
 }

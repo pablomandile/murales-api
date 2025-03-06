@@ -39,8 +39,20 @@
             }
     </li>
     <li>Crud de Visitas por postman:<br>
-            Todas: http://localhost/api/visitas<br>
-            Por id: http://localhost/api/visitas/1<br>
+            INDEX: http://localhost/api/visitas<br>
+            SHOW: http://localhost/api/visitas/{id}<br>
+            CREATE: http://localhost/api/visitas<br>
+            Body->raw->Json<br>
+            Ejemplo: <br>
+                {<br>
+                        "fecha_visita": "2025-03-06",<br>
+                        "email": "pablo@mail.com.ar",<br>
+                        "calificacion_id": 4,<br>
+                        "comentarios": "Es facinante ver la tecnica utilizada con mosaicos",<br>
+                        "mural_id": 20<br>
+                }<br>
+            UPDATE: http://localhost/api/visitas/{id}<br>
+            DELETE: http://localhost/api/visitas/{id}<br>
     </li>
 </ol>
 
