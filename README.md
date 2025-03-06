@@ -1,15 +1,19 @@
 <p align="center">
-1 Clonar el proyecto <br>
+1 Clonar el proyecto <br></p>
 Asegurarse que el archivo murales.csv esté dentro de la carpeta storage\app\data <br>
 Si no se encuentra puede descargarse de https://data.buenosaires.gob.ar/dataset/?groups=cultura-y-turismo
 
-2 composer install
+<p align="center">
+2 composer install</p>
 
-3 composer require laravel/sail --dev 
+<p align="center">
+3 composer require laravel/sail --dev </p>
 
-4 php artisan sail:install
+<p align="center">
+4 php artisan sail:install</p>
 
-5 Crear .env con db conection:<br>
+<p align="center">
+5 Crear .env con db conection:<br></p>
 
 DB_CONNECTION=mysql<br>
 DB_HOST=mysql<br>
@@ -18,13 +22,17 @@ DB_DATABASE=laravel<br>
 DB_USERNAME=sail<br>
 DB_PASSWORD=password<br>
 
-6 ./vendor/bin/sail up -d 
+<p align="center">
+6 ./vendor/bin/sail up -d </p>
 
-7 /vendor/bin/sail artisan migrate
+<p align="center">
+7 /vendor/bin/sail artisan migrate</p>
 
-8 ./vendor/bin/sail artisan db:seed
+<p align="center">
+8 ./vendor/bin/sail artisan db:seed</p>
 
-9 Consulta de murales por postman:<br>
+<p align="center">
+9 Consulta de murales por postman:<br></p>
 Todos: http://localhost/api/murales<br>
 Por id: http://localhost/api/murales/20<br>
 ejemplo de respuesta:<br>
@@ -39,13 +47,14 @@ ejemplo de respuesta:<br>
     }
 }
 
-10 Crud de Visitas por postman:<br>
+<p align="center">
+10 Crud de Visitas por postman:<br></p>
 Todas: http://localhost/api/visitas<br>
 Por id: http://localhost/api/visitas/1<br>
 
 
 
-</p>
+
 
 <p align="center">
 
