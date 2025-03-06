@@ -4,6 +4,7 @@
 <br><br>
 <ol>
     <li>Clonar el proyecto <br>
+        git clone https://github.com/pablomandile/murales-api.git<br>
         Asegurarse que el archivo murales.csv esté dentro de la carpeta storage\app\data <br>
         Si no se encuentra puede descargarse de<br>
          https://data.buenosaires.gob.ar/dataset/?groups=cultura-y-turismo</li>
