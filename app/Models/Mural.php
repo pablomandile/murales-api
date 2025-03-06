@@ -9,6 +9,8 @@ class Mural extends Model
 {
     use HasFactory;
 
+    protected $table = 'murales';
+
     protected $fillable = [
         'wkz',
         'nombre',

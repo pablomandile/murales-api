@@ -24,6 +24,26 @@ DB_PASSWORD=password
 
 8 ./vendor/bin/sail artisan db:seed
 
+9 Consulta de murales por postman:
+Todos: http://localhost/api/murales
+Por id: http://localhost/api/murales/20
+ejemplo de respuesta:
+{
+    "data": {
+        "greeting": "Gracias por usar la API de Murales de Ciudad de Buenos Aires",
+        "nombre": "EL PUEBLO HEBREO",
+        "autores": "JUAN BATLLE PLANAS",
+        "tecnica": "MOSAICO VENECIANO",
+        "ubicacion": "HALL",
+        "barrio": "Balvanera"
+    }
+}
+
+10 Crud de Visitas por postman:
+Todas: http://localhost/api/visitas
+Por id: http://localhost/api/visitas/1
+
+
 
 </p>
 

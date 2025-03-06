@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\VisitaRequest;
+use App\Http\Resources\VisitaResource;
+use App\Models\Visita;
 use Illuminate\Http\Request;
-use App\Models\Mural;
-use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\MuralResource;
+use Illuminate\Http\JsonResponse;
 
-
-class MuralesController extends Controller
+class VisitasController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResource
+    public function index()
     {
-        $murales = Mural::all();
+        $murales = Visita::all();
 
-        return MuralResource::collection(Mural::all());
+        return VisitaResource::collection(Visita::all());
     }
 
     /**
@@ -31,9 +31,14 @@ class MuralesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(VisitaRequest $request): JsonResponse
     {
-        //
+        $visita = Visita::create($request->all());
+
+        return response()->json([
+            'success' => 'true',
+            'Data' => new VisitaResource($visita)
+        ], 201);
     }
 
     /**
@@ -41,10 +46,7 @@ class MuralesController extends Controller
      */
     public function show(string $id)
     {
-        $ticket = Mural::find($id);
-
-        // return response()->json($ticket, 200);
-        return new MuralResource($ticket);
+        //
     }
 
     /**

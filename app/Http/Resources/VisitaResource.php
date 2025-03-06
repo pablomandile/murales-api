@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class MuralResource extends JsonResource
+class VisitaResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,12 +16,11 @@ class MuralResource extends JsonResource
     {
         return [
             'greeting' => 'Gracias por usar la API de Murales de Ciudad de Buenos Aires',
-            'nombre' => $this->nombre,
-            'autor' => $this->autor,
-            'tecnica' => $this->tecnica,
-            'ubicacion' => $this->ubicacion,
-            'barrio' => $this->barrio,
-
+            'fecha_visita' => $this->fecha_visita,
+            'email' => $this->email,
+            'calificacion_id' => $this->calificacion_id,
+            'comentarios' => $this->comentarios,
+            'mural_id' => $this->mural_id
         ];
     }
 }

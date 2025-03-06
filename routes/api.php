@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MuralesController;
+use App\Http\Controllers\VisitasController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('/murales', MuralesController::class, [
-    'parameters' => ['mulares' => 'mural']
+    'parameters' => ['murales' => 'mural']
 ]);
+
+// apiResource para rutas estilo “API” sin las de create/edit
+Route::apiResource('visitas', VisitasController::class);
