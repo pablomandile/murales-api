@@ -16,6 +16,7 @@ class MuralResource extends JsonResource
     {
         return [
             'greeting' => 'Gracias por usar la API de Murales de Ciudad de Buenos Aires',
+            'id' => $this->id,
             'nombre' => $this->nombre,
             'autores' => $this->autores,
             'tecnica' => $this->tecnica,

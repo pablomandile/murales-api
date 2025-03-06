@@ -33,6 +33,7 @@ class VisitasController extends Controller
      */
     public function store(VisitaRequest $request): JsonResponse
     {
+        // dd('Llegó el POST a store', $request->all());
         $visita = Visita::create($request->all());
 
         return response()->json([

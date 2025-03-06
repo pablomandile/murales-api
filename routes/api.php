@@ -26,3 +26,7 @@ Route::resource('/murales', MuralesController::class, [
 
 // apiResource para rutas estilo “API” sin las de create/edit
 Route::apiResource('visitas', VisitasController::class);
+
+Route::post('/visitas/test', function (Request $request) {
+    dd('Llegó a la ruta test', $request->all());
+});

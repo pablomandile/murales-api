@@ -16,6 +16,7 @@ class VisitaResource extends JsonResource
     {
         return [
             'greeting' => 'Gracias por usar la API de Murales de Ciudad de Buenos Aires',
+            'id' => $this->id,
             'fecha_visita' => $this->fecha_visita,
             'email' => $this->email,
             'calificacion_id' => $this->calificacion_id,

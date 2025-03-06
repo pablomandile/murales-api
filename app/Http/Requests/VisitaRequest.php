@@ -24,7 +24,7 @@ class VisitaRequest extends FormRequest
         return [
             'fecha_visita' => ['required','date'],
             'email' => ['nullable','string', 'max:50'],
-            'calificacon_id' => ['required', 'exists:calificaciones,id'],
+            'calificacion_id' => ['required', 'exists:calificaciones,id'],
             'comentarios' => 'nullable|min:10',
             'mural_id' => ['nullable', 'exists:murales,id'],
         ];
