@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class muralesSeeder extends Seeder
+class MuralesSeeder extends Seeder
 {
     public function run()
     {
