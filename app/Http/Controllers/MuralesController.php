@@ -20,13 +20,6 @@ class MuralesController extends Controller
         return MuralResource::collection(Mural::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -41,18 +34,10 @@ class MuralesController extends Controller
      */
     public function show(string $id)
     {
-        $ticket = Mural::find($id);
+        $mural = Mural::find($id);
 
         // return response()->json($ticket, 200);
-        return new MuralResource($ticket);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+        return new MuralResource($mural);
     }
 
     /**
